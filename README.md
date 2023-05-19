@@ -35,3 +35,8 @@ entity Books : managed, softDelete {
 The softDelete aspect follows the structure of the common managed aspect from @sap/cds:
 * deletedAt
 * deletedBy
+
+By default entities with the aspect softDelete will be filtered when deleted, except when a odata $filter is applied on the deletedAt attribute, eg:
+```
+http://localhost:4004/admin/Books?$filter=deletedAt ne null
+```

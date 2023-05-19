@@ -1,12 +1,12 @@
 {
   "name": "cds-softdelete",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A CAP plugin to add soft deletes to an entity",
+  "main": "cds-plugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }

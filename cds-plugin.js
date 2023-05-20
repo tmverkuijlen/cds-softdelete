@@ -30,7 +30,9 @@ cds.once('served', () => {
         });
 
         srv.on('DELETE', softDeleteEntities, async (req) => {
-            await UPDATE.entity(req.target).data({ deletedBy: req.user.id }).where(req.data);
+            await srv.transaction(req).run(
+                UPDATE.entity(req.target).data({ deletedAt: new Date().toString(), deletedBy: req.user.id }).where(req.data)
+            );
         });
 
         // Shift on handler to first position, because otherwise it won't  be called

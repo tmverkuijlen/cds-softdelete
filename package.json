@@ -1,6 +1,6 @@
 {
   "name": "cds-softdelete",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A CAP plugin to add soft deletes to an entity",
   "main": "cds-plugin.js",
   "scripts": {
